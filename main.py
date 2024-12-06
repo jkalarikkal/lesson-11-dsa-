@@ -54,13 +54,22 @@ def MinValueNode():
         current = current.left
     return current
 
+
 userin = int(input("How many elements do you want in your tree: "))
 root = None
 for i in range(userin):
     num = int(input("What number do you want: "))
     root = Inserty(root,num)
 
+what = input("What would you like to do: ")
+if what == "Inorder":
+    Inorder(root)
+elif what == "Delete":
+    userin2 = int(input("What number would you like to delete: "))
+    root = delete(root, userin2)
+    
 
+'''
 print("BST before deletion")
 Inorder(root)
 
@@ -69,5 +78,4 @@ root = delete(root, userin2)
 
 print("BST after deletion:")
 Inorder(root)
-
-
+'''
